@@ -3,7 +3,7 @@ let app = express();
 absolutePath = __dirname + '/public';
 
 
-app.use(absolutePath, express.static('/public'));
+app.use('/public', express.static(absolutePath));
 
 
 
