@@ -3,7 +3,7 @@ let app = express();
 let dotenv = require('dotenv').config();
 
 app.get('/json', function (req, res) {
-    if (process.env.MESSAGE_STYLE === message) {
+    if (process.env.MESSAGE_STYLE === uppercase) {
         res.json({ "message": "HELLO JSON" });
     } else {
         res.json({ "message": "Hello json" });
