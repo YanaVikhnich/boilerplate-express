@@ -1,11 +1,14 @@
 let express = require('express');
 let app = express();
-const querystring = require('querystring');
 
-app.route('/name').get(function (req, res) {
-    res.json({ name: req.query.querystring });
-}).post(function (req, res) {
-  querystring =  querystring.parse('firstname lastname');
+
+app.get('/name', function (req, res) {
+    const { firstname, lastname } = req.query;
+
+    if (firstname && lastname) {
+        res.json({ name: '${firstname} ${lastname}' });
+
+    } 
 });
 
 
