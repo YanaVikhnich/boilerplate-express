@@ -3,9 +3,9 @@ let app = express();
 const querystring = require('querystring');
 
 app.route('/name').get(function (req, res) {
-    res.json({ name: req.query.name });
+    res.json({ name: req.query.querystring });
 }).post(function (req, res) {
-    querystring.parse('firstname lastname');
+    querystring = '?first=firstname&last=lastname';
 });
 
 
