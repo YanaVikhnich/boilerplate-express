@@ -5,7 +5,7 @@ const querystring = require('querystring');
 app.route('/name').get(function (req, res) {
     res.json({ name: req.query.querystring });
 }).post(function (req, res) {
-    querystring = 'firstname lastname';
+  querystring =  querystring.parse('firstname lastname');
 });
 
 
